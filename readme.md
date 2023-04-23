@@ -15,7 +15,7 @@ Sores the users preferences in a csv file instead of database. Which seems pract
 
 # Airflow Orchestration
 
-4 different scheduling mechanish is allowed for now namely hourly, daily, weekly and 10mins. A user can selecct one from above in the form.
+Four different scheduling mechanish is allowed for now namely hourly, daily, weekly and 10mins. A user can selecct one from above in the form.
 ![](screenshots/home.png?raw=true)
 
 Every DAGs listed above have identical Tasks and their execution procedure. The process of reading content stored in csv processing it to determine need of notification and nitifying the user.
@@ -24,4 +24,4 @@ Every DAGs listed above have identical Tasks and their execution procedure. The 
 
 
 # Problems
-### A problem faced was, inability to import or call flask app controller functions from dags directory. Various solutions were tried by adding paths and what not so as a solution ovaral flask project directory was added inside the dags folder which is not a good practice and is to be enhanced further
+A problem faced was, inability to import or call flask app controller functions from dags directory. Various solutions were tried by adding paths and what not so as a solution ovaral flask project directory was added inside the dags folder which is not a good practice and is to be enhanced further
