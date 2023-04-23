@@ -1,0 +1,9 @@
+name,email,phone,ticker,lower,upper,options,notification
+Manjil Karki,kmanzil10@gmail.com,9840749198,MSFT,345,456,mins10,SMS
+Ram Krishna,ramu@gmail.com,34532345,BUD,28,123,hourly,SMS
+Harry,jaaa@gmail.com,9843235462,MSFT,123,456,daily,email_notification
+Angela,mkarki84@yahoo.com,23423423,BUD,12,234,mins10,email_notification
+Majil Karki,kmnzil10@gmail.com,98407249198,BUD,345,456,mins10,SMS
+Rama Krishna,ramut@gmail.com,345132345,MSFT,28,123,hourly,SMS
+Harrry,jdeaaa@gmail.com,98432354362,MSFT,123,456,daily,email_notification
+Angeqla,karki84@yahoo.com,234234423,MSFT,12,234,mins10,email_notification
