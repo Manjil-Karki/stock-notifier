@@ -36,23 +36,23 @@ def get_tasks(dag_schedule):
     return read, check, send
 
 
-# with DAG(
-#     dag_id='notifier_mins10',
-#     default_args=default_args,
-#     schedule_interval='*/10 * * * *'
-# ) as dag:    
-#     read, check, send = get_tasks('mins10')
-#     read >> check >> send
+with DAG(
+    dag_id='notifier_mins10',
+    default_args=default_args,
+    schedule_interval='*/10 * * * *'
+) as dag:    
+    read, check, send = get_tasks('mins10')
+    read >> check >> send
 
 
 
-# with DAG(
-#     dag_id='notifier_hourly',
-#     default_args=default_args,
-#     schedule_interval='@hourly'
-# ) as dag:    
-#     read, check, send = get_tasks('hourly')
-#     read >> check >> send
+with DAG(
+    dag_id='notifier_hourly',
+    default_args=default_args,
+    schedule_interval='@hourly'
+) as dag:    
+    read, check, send = get_tasks('hourly')
+    read >> check >> send
 
 
 with DAG(
@@ -64,10 +64,10 @@ with DAG(
     read >> check >> send
 
 
-# with DAG(
-#     dag_id='notifier_weekly',
-#     default_args=default_args,
-#     schedule_interval='@weekly'
-# ) as dag:    
-#     read, check, send = get_tasks('weekly')
-#     read >> check >> send
+with DAG(
+    dag_id='notifier_weekly',
+    default_args=default_args,
+    schedule_interval='@weekly'
+) as dag:    
+    read, check, send = get_tasks('weekly')
+    read >> check >> send
