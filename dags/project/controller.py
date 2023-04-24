@@ -3,6 +3,8 @@ import os
 import csv
 import pandas as pd
 import yfinance as yf
+import smtplib
+from twilio.rest import Client
 
 storage_dir = r'dags/project/storage/'
 filename = r'user_data.csv'
@@ -73,12 +75,28 @@ def compose_message(row):
     return message
 
 def send_sms(message, phone):
-    print("SMS sent to", phone)
-    print(message)
+    account_sid = 'account_sid'
+    auth_token = 'auth_token'
+    client = Client(account_sid, auth_token)
+
+    message = client.messages.create(
+        to=phone,
+        from_='twilio_number',  # Replace with your Twilio phone number
+        body=message)
+
+    print(f"Sent SMS notification to {phone}: {message.sid}")
 
 def send_mail(message, email):
-    print("Email sent to ", email)
-    print(message)
+
+    from_email = 'email'
+    from_password = 'email_password'
+
+    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        server.starttls()
+        server.login(from_email, from_password)
+
+        server.sendmail(from_email, email, message)
+
 
 def send_message(group):
     file_path = storage_dir+group+'.csv'

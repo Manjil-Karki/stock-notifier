@@ -1,3 +1,4 @@
 Flask==2.2.3
 yfinance==0.2.18
 Flask-Mail==0.9.1
+twilio==8.1.0
